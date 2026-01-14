@@ -1,7 +1,29 @@
 package main
 
-import "fmt"
+import (
+	"log"
+	"net/http"
+)
+
+type app struct {
+	host string
+	port string
+}
+
+func (app *app) index(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("Sendto.ink"))
+}
 
 func main() {
-	fmt.Println("hello world!")
+	app := &app{
+		host: "0.0.0.0",
+		port: "3821",
+	}
+
+	mux := http.NewServeMux()
+	mux.HandleFunc("/", app.index)
+
+	log.Print("server running on " + app.port)
+	err := http.ListenAndServe(app.host+":"+app.port, mux)
+	log.Fatal(err)
 }
