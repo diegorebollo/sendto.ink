@@ -1,0 +1,149 @@
+/* bagnard-sans-latin-400-normal */
+@font-face {
+    font-family: 'Bagnard Sans';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/bagnard-sans@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/bagnard-sans@latest/latin-400-normal.woff) format('woff');
+}
+
+/* cormorant-latin-wght-normal */
+@font-face {
+    font-family: 'Cormorant Variable';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 300 700;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/cormorant:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+* {
+    box-sizing: border-box;
+    position: relative;
+    min-width: 0;
+    font: inherit;
+}
+
+img,
+video,
+svg {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Cormorant Variable', serif;
+    font-size: 18px;
+    min-height: 100dvh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(249, 251, 255);
+
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+a{
+ text-decoration: none;
+ color: inherit;
+}
+
+.details-list {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.layout {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 80px;
+    /* margin-top: -512px; */
+    /* padding-bottom: 960px; */
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    min-height: 960px;
+    gap: 32px;
+}
+
+@media (max-width: 1300px) {
+  main {
+    flex-direction: column;
+    gap: 16px;     
+  }
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+section {
+    width: 600px;
+    opacity: 0.8;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 16px;
+}
+
+#main-title {
+    font-family: 'Bagnard Sans', sans-serif;
+    font-size: 9rem;
+    font-weight: 900;
+    margin-bottom: 0;
+}
+
+#main-subtitle {
+    margin-top: -16px;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 200;
+
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 0;
+    margin: 0; 
+}
+
+summary{
+    /* background-color: rebeccapurple; */
+    margin-bottom: 8px;
+}
+
+.edit-icon{
+    width: 40px;
+}
+
